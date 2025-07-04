@@ -1,8 +1,14 @@
-version: '3.4'
+version: '3.8'
 
 services:
   catalogdb:
     image: postgres
+
+  basketdb:
+    image: postgres
+
+  distributedcache:
+    image: redis
 
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
@@ -12,4 +18,4 @@ services:
 
 volumes:
   postgres_catalog:
-
+  postgres_basket:
