@@ -12,6 +12,6 @@ namespace Ordering.Application.Dtos
         string CardNumber,
         string Expiration,
         string Cvv,
-        int paymentMethod
+        int PaymentMethod
     );
 }
