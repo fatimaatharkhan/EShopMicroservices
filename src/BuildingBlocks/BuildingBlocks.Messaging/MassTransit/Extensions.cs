@@ -19,10 +19,10 @@ namespace BuildingBlocks.Messaging.MassTransit
 
                 config.UsingRabbitMq((context, configurator) =>
                 {
-                    configurator.Host(new Uri(configuration["MessageBroker:RabbitMQ:Host"]), host =>
+                    configurator.Host(new Uri(configuration["MessageBroker:Host"]), host =>
                     {
-                        host.Username(configuration["MessageBroker:RabbitMQ:UserName"]);
-                        host.Password(configuration["MessageBroker:RabbitMQ:Password"]);
+                        host.Username(configuration["MessageBroker:UserName"]);
+                        host.Password(configuration["MessageBroker:Password"]);
                     });
                     configurator.ConfigureEndpoints(context);
                 });
